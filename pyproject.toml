@@ -1,5 +1,5 @@
 [tool.version_placeholder]
-version = "1.0.2"
+version = "1.0.3"
 
 [tool.semantic_release]
 version_toml = [

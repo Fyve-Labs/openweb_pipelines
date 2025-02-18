@@ -1,12 +1,10 @@
 # CHANGELOG
 
 
+## v1.0.3 (2025-02-18)
+
+
 ## v1.0.2 (2025-01-28)
-
-### Bug Fixes
-
-- Include assistant message as trace.output in langfuse
-  ([`bca4f84`](https://github.com/Fyve-Labs/openweb_pipelines/commit/bca4f84c24fa54ee3b50e48a8cece4a96792148c))
 
 ### Documentation
 
@@ -64,6 +62,9 @@
 
 - Filter
   ([`95ed193`](https://github.com/Fyve-Labs/openweb_pipelines/commit/95ed193ef7afa1f99290954f846efc8d146cfa22))
+
+- Include assistant message as trace.output in langfuse
+  ([`bca4f84`](https://github.com/Fyve-Labs/openweb_pipelines/commit/bca4f84c24fa54ee3b50e48a8cece4a96792148c))
 
 - Initialize request object, correct typo, and rename parameter
   ([`0303263`](https://github.com/Fyve-Labs/openweb_pipelines/commit/030326319770b47809a76731d4476bd73c685950))
@@ -142,6 +143,9 @@ surrounding quotes does not match with regex in `start.sh` download.
 - **docker-build**: Refine start.sh for pre-install at docker build
   ([`010aeb3`](https://github.com/Fyve-Labs/openweb_pipelines/commit/010aeb365af64e66286e4f5e25a94c44571140c1))
 
+- **docker-build**: Refine start.sh for pre-install at docker build
+  ([`6831103`](https://github.com/Fyve-Labs/openweb_pipelines/commit/6831103ac40d626a4a2a43c9acc5fc542e6dbcea))
+
 - **examples/llamaindex_ollama**: Move path to pvc
   ([`307abf1`](https://github.com/Fyve-Labs/openweb_pipelines/commit/307abf187a3ed77743699e61cd00aef3db9251b5))
 
@@ -163,11 +167,17 @@ surrounding quotes does not match with regex in `start.sh` download.
 - **wikipedia-pipeline**: Update wikipedia pipeline example (api + responses)
   ([`2628e53`](https://github.com/Fyve-Labs/openweb_pipelines/commit/2628e5358da3acf73e9634c32db0845735be9544))
 
+- **wikipedia-pipeline**: Update wikipedia pipeline example (api + responses)
+  ([`5a6e476`](https://github.com/Fyve-Labs/openweb_pipelines/commit/5a6e476fd90d9f6ecaee648f39722c5bb1b26020))
+
 - **wikipedia-streaming**: Convert to streaming-compatible responses
   ([`dd76e26`](https://github.com/Fyve-Labs/openweb_pipelines/commit/dd76e26526cb4e5bb1fe8a03394e3b8e28efad37))
 
 - **wikipedia-streaming**: Convert to streaming-compatible responses
   ([`f6f234a`](https://github.com/Fyve-Labs/openweb_pipelines/commit/f6f234a90bc684df72fc92acd300661c1229bc16))
+
+- **wikipedia-streaming**: Convert to streaming-compatible responses
+  ([`542d143`](https://github.com/Fyve-Labs/openweb_pipelines/commit/542d143a883aaea74cb8c5d81fdfaaf17ee209ff))
 
 ### Chores
 
@@ -231,6 +241,9 @@ surrounding quotes does not match with regex in `start.sh` download.
 
 - **docker-build**: Update the README for advanced docker build
   ([`c71eb92`](https://github.com/Fyve-Labs/openweb_pipelines/commit/c71eb92d975c657f19087edaf671222604ed4563))
+
+- **docker-build**: Update the README for advanced docker build
+  ([`a28fdd1`](https://github.com/Fyve-Labs/openweb_pipelines/commit/a28fdd1ed7fa180c37f296d46dbd3777d651f303))
 
 - **testing**: Update docs with example runs for tests and flake via docker
   ([`67892c8`](https://github.com/Fyve-Labs/openweb_pipelines/commit/67892c841dc1fdf618d4a672a43f3904a1ddc108))
