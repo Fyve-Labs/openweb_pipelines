@@ -1,3 +1,26 @@
+# Fyve-Centric Contributions
+NOTE: This branch "main" should not be pushed to [the main pipelines repository](https://github.com/open-webui/pipelines) -- it is used for internal deployments and development and may have modified build scripts.  Instead, if you want to push to something to the main branch, use the [main-upstream](https://github.com/Fyve-Labs/openweb_pipelines/tree/main-upstream) branch and create a pull request!
+
+## Novel Fyve Pipelines
+Fyve pipelines are launched via a docker-compose script that will retrieve images from our upstream container registry.  For testing this *should* work locally using the same image names, but otherwise, you'll need to access the [Fyve ECR](https://us-east-1.console.aws.amazon.com/ecr/private-registry/repositories?region=us-east-1)
+
+## Development with Docker Compose 
+Using [Docker Compose](https://docs.docker.com/compose/) simplifies the management of multi-container Docker applications. The main scripts `.github/docker_run.sh` will launch a docker compose instance with the following services: Open WebUI and Pipelines.  The `docker-compose.yaml` file in this directory is used to define the services and their configurations.  The `Pipelines` instance will use a locally built version. (NB: [borrowed from this PR](https://github.com/open-webui/pipelines/pull/356))  
+
+** WARNING ** The OpenWebUI is a hefty docker image!
+
+To execute OpenAI-based queries on the Fyve llmproxy address (`https://litellm-proxy.fyve.dev/`) create a `env.sh` file in the root of this repository with the following variables:
+```bash
+OPENAI_API_KEY="your-openai-api-key"
+```
+
+
+---
+
+(public Pipelines README below)
+
+---
+
 <p align="center">
   <a href="#"><img src="./docs/images/header.png" alt="Pipelines Logo"></a>
 </p>
@@ -131,6 +154,24 @@ done
 echo "New Custom Install Pipes: $PIPELINES_URLS"
 
 docker build --build-arg PIPELINES_URLS=$PIPELINES_URLS --build-arg MINIMUM_BUILD=true -f Dockerfile .
+```
+
+### Testing the Pipelines Server
+
+To be updated as the project matures, testing for coverage and basic functionality is included in the 
+tests directory.  You can build a docker image and start a test with the following commands.
+
+```sh
+# build the image
+docker build -t pipelines:dev --build-arg USE_TEST=$USE_TEST --build-arg MINIMUM_BUILD=true -f Dockerfile .
+
+# prep coverage directory
+mkdir -p `pwd`/coverage
+docker run --rm -v "`pwd`/coverage:/coverage" -v "`pwd`/tests:/app/tests" pipelines:dev pytest --cov=/app  --cov-report html:/coverage/coverage.html --cov-report=xml:/coverage/coverage.xml tests
+
+# run flake8 for syntax suggestions
+SELECT_CLAUSE="--ignore=E501,E121,E128,E124,E123"
+docker run --rm -v "`pwd`/coverage:/coverage" pipelines:dev flake8 /app --exclude .venv --count $SELECT_CLAUSE --show-source --statistics --output-file=/coverage/flake8.txt --color=never --exit-zero
 ```
 
 ## 📂 Directory Structure and Examples

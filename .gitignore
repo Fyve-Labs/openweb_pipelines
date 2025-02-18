@@ -1,9 +1,11 @@
 __pycache__
 .env
+env.sh
+data
 
 /litellm
 
-
+coverage
 pipelines/*
 !pipelines/.gitignore
 .DS_Store
