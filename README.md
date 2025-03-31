@@ -28,6 +28,8 @@ OPENAI_API_KEY="your-openai-api-key"
 # Pipelines: UI-Agnostic OpenAI API Plugin Framework
 
 > [!TIP]
+> **DO NOT USE PIPELINES!**
+>
 > If your goal is simply to add support for additional providers like Anthropic or basic filters, you likely don't need Pipelines . For those cases, Open WebUI Functions are a better fit—it's built-in, much more convenient, and easier to configure. Pipelines, however, comes into play when you're dealing with computationally heavy tasks (e.g., running large models or complex logic) that you want to offload from your main Open WebUI instance for better performance and scalability.
 
 
