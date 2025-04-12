@@ -1,6 +1,28 @@
 # CHANGELOG
 
 
+## v1.1.0 (2025-04-12)
+
+### Bug Fixes
+
+- **cursor**: Adding cursor rules to repo for better cursor guidance
+  ([`b111c27`](https://github.com/Fyve-Labs/openweb_pipelines/commit/b111c27a1bf0bda6aca8d288c49250e48f3f6dc7))
+
+- **flowise**: Add streaming capability to flowise integration
+  ([`e56012a`](https://github.com/Fyve-Labs/openweb_pipelines/commit/e56012a3bead11fcacd93673b64679de4346b498))
+
+- **flowise**: Minor cleanup and finalize of integration hook
+  ([`185187f`](https://github.com/Fyve-Labs/openweb_pipelines/commit/185187fe3b25629039e25fedae8ec139576324fb))
+
+### Features
+
+- **flowise**: Add flowise integration for agentic evaluation
+  ([`f7fd431`](https://github.com/Fyve-Labs/openweb_pipelines/commit/f7fd4317b68d2e63e8145d3de11842380d5360d8))
+
+- **flowise**: Adding flowise integration to core fyve pipeline branch
+  ([`d52ae78`](https://github.com/Fyve-Labs/openweb_pipelines/commit/d52ae78ffb282be00a7907416b92b2c9873e9955))
+
+
 ## v1.0.3 (2025-02-18)
 
 
