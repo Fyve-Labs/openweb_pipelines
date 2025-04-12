@@ -5,7 +5,7 @@ NOTE: This branch "main" should not be pushed to [the main pipelines repository]
 Fyve pipelines are launched via a docker-compose script that will retrieve images from our upstream container registry.  For testing this *should* work locally using the same image names, but otherwise, you'll need to access the [Fyve ECR](https://us-east-1.console.aws.amazon.com/ecr/private-registry/repositories?region=us-east-1)
 
 ## Development with Docker Compose 
-Using [Docker Compose](https://docs.docker.com/compose/) simplifies the management of multi-container Docker applications. The main scripts `.github/docker_run.sh` will launch a docker compose instance with the following services: Open WebUI and Pipelines.  The `docker-compose.yaml` file in this directory is used to define the services and their configurations.  The `Pipelines` instance will use a locally built version. (NB: [borrowed from this PR](https://github.com/open-webui/pipelines/pull/356))  
+Using [Docker Compose](https://docs.docker.com/compose/) simplifies the management of multi-container Docker applications. The main scripts `.github/workflows-fyve/docker_run.sh` will launch a docker compose instance with the following services: Open WebUI and Pipelines.  The `docker-compose.yaml` file in this directory is used to define the services and their configurations.  The `Pipelines` instance will use a locally built version. (NB: [borrowed from this PR](https://github.com/open-webui/pipelines/pull/356))  
 
 ** WARNING ** The OpenWebUI is a hefty docker image!
 

@@ -1,0 +1,7 @@
+---
+description: Only when I ask for a checkpoint to be created
+globs: 
+alwaysApply: false
+---
+1. Post a new block at the top of the [CHANGELOG.md](mdc:CHANGELOG.md) with a general description of the enhancement including key features. This should be markdown including a date with the features added and the technical improvements. Add if it's a bug or an enhancement. Put a summary paragraph at the bottom of the update.
+2. Create a git commit with a general description of what we did.
