@@ -1,6 +1,25 @@
 # CHANGELOG
 
 
+## v1.2.0 (2025-04-12)
+
+### Bug Fixes
+
+- **flowise**: Add streaming capability to flowise integration
+  ([`cb5a16a`](https://github.com/Fyve-Labs/openweb_pipelines/commit/cb5a16a5a499e58e0340c5961a92b6b09a726bdc))
+
+- **flowise**: Minor cleanup and finalize of integration hook
+  ([`af479bc`](https://github.com/Fyve-Labs/openweb_pipelines/commit/af479bc7ceb5f2ce1f3b5fef63e05326bb202df8))
+
+- **undefined-const**: Hotfix for missing constants; hazarding guess from context but breaks build
+  ([`63c4eec`](https://github.com/Fyve-Labs/openweb_pipelines/commit/63c4eec32970a6688b1e1b601ced9add2d24f7bc))
+
+### Features
+
+- **flowise**: Add flowise integration for agentic evaluation
+  ([`5e1f90d`](https://github.com/Fyve-Labs/openweb_pipelines/commit/5e1f90dc49de79fff04f791b404e6b4eca8f8366))
+
+
 ## v1.1.0 (2025-04-12)
 
 ### Bug Fixes
