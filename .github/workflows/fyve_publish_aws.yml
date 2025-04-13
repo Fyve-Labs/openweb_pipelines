@@ -81,6 +81,23 @@ jobs:
 
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+          echo "image_tag=$IMAGE_TAG" >> $GITHUB_OUTPUT
+
+      - name: Tailscale
+        uses: tailscale/github-action@v3
+        with:
+          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
+          version: latest
+
+      - name: Setup Fyve Cli
+        run: |
+          curl -fL https://github.com/Fyve-Labs/fyve-cli/raw/refs/heads/main/install.sh | bash
+
+      - name: Update image
+        env:
+          IMAGE_TAG: ${{ steps.build-image.outputs.image_tag }}
+        run: |
+          fyve update openweb-pipelines -t $IMAGE_TAG
 
       # - name: Fill in the new image ID in the Amazon ECS task definition
       #   id: task-def
