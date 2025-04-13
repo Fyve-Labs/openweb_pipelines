@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.2.1 (2025-04-13)
+
+### Bug Fixes
+
+- **undefined-const**: Hotfix for missing constants; hazarding guess from context but breaks build
+  ([`ef52d54`](https://github.com/Fyve-Labs/openweb_pipelines/commit/ef52d542554baf8e810a6c45521a281920e2a3ea))
+
+
 ## v1.2.0 (2025-04-12)
 
 ### Bug Fixes
